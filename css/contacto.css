@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+  body{
+    background-color: darkcyan;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
+  }
+
+
+.contenedor{
+    
+  width: 1024px;
+  height: 1024px;
+  margin: 50px auto;
+
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;/*si un elemento esta fuera del contenedor, la propiedad lo oculta*/
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);/*sobra del cuadro del formulario*/
+}
+
+.info_usuario{
+  height: 1cm;
+  margin: 1cm;
+  padding: 1cm;
+}
+
+.menu {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: black;
+}
+
+.menu ul li a:hover {
+  background-color: dimgrey;
+}
+
+.pie{
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+}
+
+input{
+  border-radius: 7px;
+  
+}
+select{
+  border-radius: 7px;
+}
+

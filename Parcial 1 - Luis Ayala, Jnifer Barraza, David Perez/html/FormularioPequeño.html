@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulariPequeño.css">
+    
+    <title>Registro de información anciano</title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/catalogo.html">Catalogo</a></li>
+            <li><a href="../html/formulario contacto.html">Contactenos</a></li>
+            <li><a href="../html/PQR.html">Peticiones Quejas y Reclamos</a></li>
+            <li><a href="../html/trabaja_con_nosotros.html">Trabaja con Nosotros</a></li>
+            <li><a href="../html/FormularioPequeño.html">FormularioPequeño</a></li>
+          </ul>
+        </div>
+    </nav>
+
+
+    <form id="allForm">
+        <div class="cajaForm">
+            <h1>Formulario de información de la persona con Alzheimer</h1>
+            <div class="soloform">
+                <div class="Claseformulario">
+                    <label for="nombre" >Nombre</label><br>
+                    <input type="text" name="nombre" id="nombre" class="Estilo_input">
+                </div>
+                
+                <div class="Claseformulario">
+                    <label for="apellido">Apellidos</label><br>
+                    <input type="text" name="apellido" id="apellido" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="edad">Edad</label><br>
+                    <input type="number" name="edad" id="edad" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="cedula">Identificación</label><br>
+                    <input type="number" name="cedula" id="cedula" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="tipoSangre">Tipo Sanguíneo</label><br>
+                    <input type="text" name="tipoSangre" id="tipoSangre" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="otraEnfermedad">Otra Enfermedad</label><br>
+                    <input type="text" name="otraEnfermedad" id="otraEnfermedad" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="direccionResidencia">Direccion de Residencia</label><br>
+                    <input type="text" name="direccionResidencia" id="direccionResidencia" class="Estilo_input">
+                </div>
+            
+                <div class="Claseformulario">
+                    <label for="eps">Eps</label><br>
+                    <input type="text" name="eps" id="eps" class="Estilo_input">
+                </div>
+
+                <div class="ClaseFormulario">
+                    <button id="botonDeEnvio">Añadir</button>
+                </div>
+            </div>
+            
+        </div>
+    </form>
+    <div class="formatoTabla">
+        <center>
+            <table id="transationTable" >
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Identificación</th>
+                    <th>Tipo Sanguíneo</th>
+                    <th>Otra Enfermedad</th>
+                    <th>Dirección de Residencia</th>
+                    <th>Eps</th>
+                    <th>Eiminar</th>
+                    <th>Editar</th>
+                </tr>
+                
+                
+                
+            </table>
+        </center>
+        
+       <!--
+        <script>
+            const form = document.getElementById("allForm");//seleccionar el formulario
+            
+            /*min 13:00*/
+            form.addEventListener("submit",function(event){
+                    event.preventDefault();/*lo que hace es cancelar el el vento, es decir cnacela el comportamineto por defecto del navegador. el comporamineto que tena al enciar el formulario era recargar la pgina con la linea de codigo "event.preventDefault();" lo cancelamos*/
+                    let transactionFormData = new FormData(form);
+                    insertRowInTransactionTable(transactionFormData)
+                }
+            )
+    
+            function insertRowInTransactionTable(transactionFormData){
+                let transactionTableRef = document.getElementById("transationTable");
+                let newTransactionRowRef = transactionTableRef.insertRow(-1);
+    
+                let newTypeCellRef = newTransactionRowRef.insertCell(0)
+                newTypeCellRef.textContent = transactionFormData.get("nombre")
+    
+                newTypeCellRef = newTransactionRowRef.insertCell(1)
+                newTypeCellRef.textContent = transactionFormData.get("apellido")
+    
+                newTypeCellRef = newTransactionRowRef.insertCell(2)
+                newTypeCellRef.textContent = transactionFormData.get("edad")
+    
+                newTypeCellRef = newTransactionRowRef.insertCell(3)
+                newTypeCellRef.textContent = transactionFormData.get("cedula")
+
+                newTypeCellRef = newTransactionRowRef.insertCell(4)
+                newTypeCellRef.textContent = transactionFormData.get("tipoSangre")
+
+                newTypeCellRef = newTransactionRowRef.insertCell(5)
+                newTypeCellRef.textContent = transactionFormData.get("otraEnfermedad")
+
+                newTypeCellRef = newTransactionRowRef.insertCell(6)
+                newTypeCellRef.textContent = transactionFormData.get("direccionResidencia")
+
+                newTypeCellRef = newTransactionRowRef.insertCell(7)
+                newTypeCellRef.textContent = transactionFormData.get("eps")
+   
+            }
+        </script>
+-->
+
+    </div>
+    
+
+
+        <footer class="pie">
+            <center>
+            Todos los Derechos Reservados &copy; 2021 <br />
+            Diseñado por Luis Ayala, Jenifer Barraza, David Pérez <br />
+            www.dominio.com
+            </center>
+        </footer>
+
+
+
+
+
+      <script src="/js/FormulariPequeño.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE CONTACTO</title>
+    <link rel="stylesheet" href="../css/furmulariocontacto.css">
+       
+
+</head>
+<body>
+    
+    <nav>
+        <div class="menu">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/catalogo.html">Catalogo</a></li>
+            <li><a href="../html/formulario contacto.html">Contactenos</a></li>
+            <li><a href="../html/PQR.html">Peticiones Quejas y Reclamos</a></li>
+            <li><a href="../html/trabaja_con_nosotros.html">Trabaja con Nosotros</a></li>
+            <li><a href="../html/FormularioPequeño.html">FormularioPequeño</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <form id = form1>
+        <div class="cajaForm">
+            
+              <h2>Contactenos</h2> <br>
+              <label for="nombre" class="form-label">Nombre:</label> <br>
+              <input type="text" name="nombre"id="nombre" class="Estilo" placeholder="Escriba su nombre"><br />
+
+              <label for="Apellido" class="form-label">Apellidos:</label> <br>
+              <input type="text" name="Apellido" id="Apellido" class="Estilo" placeholder="Esciba su apellido" class="Estilo"><br />
+
+              <label for="Correo">Correo electrónico:</label> <br>
+              <input type="email" name="Correo" id="Correo" class="Estilo"> <br />
+
+              <label for="Telefono">Teléfono:</label><br>
+              <input type="tel" name="Telefono" id="Telefono" class="Estilo"> <br>
+            
+              <label for="Mensaje">Mensaje</label><br>
+              <textarea name="Mensaje" id="Mensaje" class="Estilo_input"placeholder="Escribe tu mensaje"></textarea><br><br>
+            
+              <button id="botonDeEnvio">Enviar Formulario</button>
+              <input type="button" onclick="tableToExcel('infcontacto', 'Informacion de contactos')" value="Export to Excel">
+        </div>
+    </form>
+    <div>
+        <table id = "infcontacto" class= tabla   >
+            <tr>
+               <th>Nombre</th>
+               <th>Apellido</th>
+               <th>Correo</th>
+               <th>Telefono</th>
+               <th>Mensaje</th>
+            </tr> 
+        </table>
+    </div> 
+    
+    
+    <script>
+  
+        const form = document.getElementById("form1");
+
+        form.addEventListener("submit",function(event){
+            event.preventDefault();/*Cancela que la pagina se recarge, se recarga por defecto y esto lo evita*/
+
+            let transactionFormData = new FormData(form);/*obtinr los datos del formulario*/
+            let transactionObj = covertFormDataToTransactionObj(transactionFormData) 
+            saveTransactionObj(transactionObj)/*agrega al local estoral*/
+            insertRowInTransactionTable(transactionObj)/*agregar a la tabla*/
+            form.reset()
+        })
+        
+
+
+
+    </script>
+        <footer class="pie">
+            <center>
+              Todos los Derechos Reservados &copy; 2021 <br />
+              Diseñado por Luis Ayala, Jenifer Barraza, David Pérez <br />
+              www.dominio.com
+            </center>
+          </footer>
+        <script src="../js/formulariocontacto.js"></script>
+    
+</body>
+</html>
